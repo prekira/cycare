@@ -34,28 +34,19 @@
 
   "content_scripts": [
     {
-      "matches": [
-        "https://www.facebook.com/*",
-        "https://www.instagram.com/*",
-        "https://www.twitter.com/*"
-      ],
-      "css": [
-        "src/inject/inject_fb.css",
-        "src/inject/inject_inst.css",
-        "src/inject/inject_twt.css"
-      ]
+      "matches": ["http://*.facebook.com/*"],
+      "css": ["src/inject/inject_fb.css"],
+      "js": ["src/inject/inject_fb.js"]
     },
     {
-      "matches": [
-        "https://www.facebook.com/*",
-        "https://www.instagram.com/*",
-        "https://www.twitter.com/*"
-      ],
-      "js": [
-        "src/inject/inject_fb.js",
-        "src/inject/inject_inst.js",
-        "src/inject/inject_twt.js"
-      ]
+      "matches": ["http://*.instagram.com/*"],
+      "css": ["src/inject/inject_inst.css"],
+      "js": ["src/inject/inject_inst.js"]
+    },
+    {
+      "matches": ["http://*.twitter.com/*"],
+      "css": ["src/inject/inject_twt.css"],
+      "js": ["src/inject/inject_twt.js"]
     }
   ]
 }
