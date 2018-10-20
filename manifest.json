@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "CYCARE",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "Combat cyberbullying and provide a safe space for victims to recover",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -31,21 +31,30 @@
     " https://twitter.com/* ",
     " https://www.instagram.com/"
   ],
+
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.facebook.com/*",
+        "https://www.instagram.com/*",
+        "https://www.twitter.com/*"
       ],
       "css": [
-        "src/inject/inject.css"
+        "src/inject/inject_fb.css",
+        "src/inject/inject_inst.css",
+        "src/inject/inject_twt.css"
       ]
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.facebook.com/*",
+        "https://www.instagram.com/*",
+        "https://www.twitter.com/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/inject_fb.js",
+        "src/inject/inject_inst.js",
+        "src/inject/inject_twt.js"
       ]
     }
   ]
