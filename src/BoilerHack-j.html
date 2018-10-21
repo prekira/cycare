@@ -92,14 +92,60 @@
 <div id="status">
 </div>
 
+<script>
+// FB.api(
+//   '/me',
+//   'GET',
+//   {"fields":"id,name"},
+//   function(response) {
+//       // Insert your code here
+//   }
+// );
+
+/* make the API call */
 FB.api(
-  '/me',
-  'GET',
-  {"fields":"id,name"},
-  function(response) {
-      // Insert your code here
-  }
+    "/{comment-id}",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        var arrayofComment = comment.message.splt();
+        /* //check if the word in the array is negative comment
+          //or figure out whether the comment is negative comment
+          var negWordInCmt;
+        for (var i = 0; i < arrayofComment; i++) {
+          console.log(arrayofComment[i]);
+
+          if (arrayofComment[i] is negative according to the library) {
+            negWordInCmt = arrayofComment[i];
+          }
+        }
+        }
+        */
+
+        /*type of the word
+         //1. positive 2. negative 3. profanity */
+         var cntnegword = 0;
+         var cntprofanity = 0;
+        if (negWordInCmt is negative) {
+          cntnegword++;
+          if (cntnegword >= 5) {
+            //make that user move to possibleBlockLvl1 category
+            break;
+          }
+        }
+        if (cntprofanity is profanity) {
+          if(that user is in possibleBlockLvl1 )
+          //make that user move to possibleBlock category
+          else{
+            move that user to possibleBlocklevel2
+          }
+          cntprofanity++;
+        }
+
+      }
+    }
 );
+</script>
 
 
 
